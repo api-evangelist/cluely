@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cluely/cluely-cli
+notes: >-
+  Cluely publishes no public REST API and therefore no OpenAPI securitySchemes
+  to derive from. The documented authentication surface is the first-party CLI,
+  which authenticates via a browser-based OAuth sign-in and stores credentials
+  in the OS keyring. End users of the desktop/web app sign in with Google Auth.
+summary:
+  types: [oauth2]
+  oauth2_flows: [browser-interactive]
+schemes:
+  - name: CLIBrowserLogin
+    type: oauth2
+    flow: browser-interactive
+    description: >-
+      `cluely auth login` opens the browser to sign in to your Cluely account.
+    credential_storage: OS keyring (macOS Keychain, Windows Credential Manager, Linux Secret Service)
+    commands: [cluely auth login, cluely auth logout, cluely auth status]
+    sources: [cli/cluely-cli.yml]
+  - name: GoogleAuth
+    type: oauth2
+    flow: authorizationCode
+    description: End-user sign-in to the Cluely web/desktop app via Google authentication.
+    sources: [changelog/cluely-changelog.yml]
