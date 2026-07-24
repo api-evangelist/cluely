@@ -1,0 +1,66 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.cluely.com/changelog
+scheme: semver-app          # desktop app product versioning (vMAJOR.MINOR.PATCH)
+current_version: v1.90.1
+notes: >-
+  Cluely ships a dated product changelog for its desktop/mobile meeting
+  assistant. It is not a REST API changelog — the "API v2 endpoints" line items
+  refer to Cluely's own internal application endpoints, not a published public
+  API. Recent window captured below.
+entries:
+  - version: v1.90.1
+    date: '2025-12-18'
+    highlights:
+      - Audio input testing with microphone verification and real-time visualization
+      - Transcript moved to dashboard with improved speaker labeling
+      - Enhanced first-time user messaging and billing navigation
+    breaking: false
+  - version: v1.88.7
+    date: '2025-12-10'
+    highlights:
+      - New simplified desktop widget for AI meeting assistance
+      - Introduction of Cluely Mobile for in-person meetings and voice memos
+    breaking: false
+  - version: v1.88.6
+    date: '2025-12-03'
+    highlights:
+      - Reduced startup time through lazy loading
+      - Device limit enforcement (max 2 simultaneous logins)
+    breaking: false
+  - version: v1.88.3
+    date: '2025-11-06'
+    highlights:
+      - Enhanced audio compatibility for Windows and Apple-silicon Macs
+      - Real-time calendar sync replacing 5-minute refresh cycles
+      - Windows GPU acceleration enabled
+    breaking: false
+  - version: v1.81.0
+    date: '2025-10-29'
+    highlights:
+      - Chat history viewing with improved transcript UI
+      - Quick join button for upcoming meetings
+    breaking: false
+  - version: v1.78.0
+    date: '2025-10-22'
+    highlights:
+      - Redesigned onboarding experience
+      - Undetectability plan introduction
+    breaking: false
+  - version: v1.62.0
+    date: '2025-10-01'
+    highlights:
+      - AI participant history tracking and cached AI overview endpoints
+      - Internal API v2 endpoints — enhanced user metadata, improved action models
+    breaking: false
+  - version: v1.49.00
+    date: '2025-09-16'
+    highlights:
+      - Custom actions endpoint (internal)
+      - Universal chat support (Pylon for enterprise, Intercom for consumers)
+    breaking: false
+  - version: v1.0.0
+    date: '2025-08-30'
+    highlights:
+      - Initial launch — Google Calendar, custom keybinds, multi-language support
+    breaking: false

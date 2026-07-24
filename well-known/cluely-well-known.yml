@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+host: https://cluely.com
+notes: >-
+  Probed the standard /.well-known/ discovery surface on the primary host and
+  the docs host. None are published (all 404). Recorded for auditability; no
+  WellKnown catalog pointer is emitted because nothing is served.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: https://docs.cluely.com/.well-known/security.txt
+    status: 404

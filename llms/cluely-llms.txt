@@ -1,0 +1,24 @@
+# Cluely Guide
+
+## Docs
+
+- [Changelog](https://docs.cluely.com/changelog.md): Cluely innovates every day. See what's new.
+- [Audio Capture Errors](https://docs.cluely.com/debugging/audio.md): Configure Cluely to transcribe your meetings from Microphone and System Audio
+- [Calendar Sync Errors](https://docs.cluely.com/debugging/calendar.md): Troubleshoot calendar integration and sync issues with Cluely
+- [MDM Permissions](https://docs.cluely.com/debugging/mdmpermissions.md): Configure Cluely to transcribe your meetings from Microphone and System Audio
+- [2. Admin Training](https://docs.cluely.com/enterprise/admintraining.md): AI powered meetings to maximize your team's potential.
+- [1. Customization Suite](https://docs.cluely.com/enterprise/customizationsuite.md): Configure Cluely for your organization's specific needs and workflows
+- [Directory Sync](https://docs.cluely.com/enterprise/directorysync.md): Bring the entire team over in a few clicks.
+- [CRM and ATS Integrations](https://docs.cluely.com/enterprise/integrations.md): Connect Cluely with your CRM and ATS systems through Merge.dev for seamless data synchronization
+- [Knowledge Base](https://docs.cluely.com/enterprise/knowledgebase.md): Sync your company knowledge, sales scripts, and process docs for AI-powered call assistance
+- [4. Pilot & Success Reporting](https://docs.cluely.com/enterprise/pilotreporting.md): How we track and report ROI.
+- [Role Management](https://docs.cluely.com/enterprise/rolemanagement.md): Understanding roles, teams, and prompt assignments in your organization
+- [3. Team Wide Kickoff](https://docs.cluely.com/enterprise/teamkickoff.md): Get the team ramped up.
+- [Coaching](https://docs.cluely.com/feature/coaching.md): Customizable sales and call coaching with Missed Opportunities analysis and ROI monitoring
+- [Live Insights](https://docs.cluely.com/feature/liveinsights.md): Get real-time AI insights and ask questions during your meetings with Cluely's live assistance
+- [Meeting Notes](https://docs.cluely.com/feature/postcall.md): Access detailed meeting notes, AI insights, and transcripts from your past meetings
+- [Pre Call Briefs](https://docs.cluely.com/feature/precall.md): Get prepared for meetings with AI-generated briefs about participants and meeting context
+- [Settings](https://docs.cluely.com/feature/settings.md): Configure Cluely's settings, keyboard shortcuts, and customize your AI assistant experience
+- [Undetectability](https://docs.cluely.com/feature/undectability.md): Learn how Cluely's invisibility feature works to keep your AI assistant hidden during screen sharing
+- [Welcome to Cluely](https://docs.cluely.com/index.md): Everything you need to know about Cluely for Enterprises. Your AI meeting assistant that helps you win deals and make every rep your best rep.
+- [Quickstart](https://docs.cluely.com/quickstart.md): Start powering your calls in three steps.

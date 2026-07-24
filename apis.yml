@@ -1,21 +1,52 @@
 aid: cluely
 name: Cluely
-description: 'Cluely is a company surfaced as a portfolio company of susa-ventures and added to the API
-  Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Cluely is an AI meeting assistant that listens to calls in real time,
+  transcribes across 12+ languages, and surfaces instant notes, answers, and
+  next steps through an on-screen overlay designed to stay undetectable during
+  screen sharing. It works across Zoom, Microsoft Teams, and Google Meet, syncs
+  with calendars, and offers enterprise capabilities such as CRM/ATS
+  integration via Merge.dev, knowledge-base grounding, directory sync, role
+  management, and call coaching with ROI reporting. Cluely ships desktop and
+  mobile apps plus a first-party command-line interface for managing meeting
+  sessions and transcripts from the terminal. Founded by Roy Lee, the company
+  raised a Series A led by Andreessen Horowitz and is backed by Susa Ventures.
+  There is no public REST API today; this profile captures the developer-facing
+  surface Cluely does publish (CLI, changelog, llms.txt, bug bounty).
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/202236240?v=4
 url: https://raw.githubusercontent.com/api-evangelist/cluely/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - susa-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+- andreessen-horowitz
+x-tier: profiled
+x-tier-reason: enrichment-pass-2026-07-18
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Ai
+- Meeting Assistant
+- Productivity
+- Transcription
+- Speech Recognition
+- Sales
+- Real-Time
+- Command Line Interface
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +56,52 @@ maintainers:
 common:
 - type: Website
   url: https://cluely.com
+- type: Documentation
+  url: https://docs.cluely.com
+- type: Quickstart
+  url: https://docs.cluely.com/quickstart
+- type: Pricing
+  url: https://cluely.com/pricing
+- type: Login
+  url: https://v2.cluely.com/
+- type: TermsOfService
+  url: https://cluely.com/terms
+- type: PrivacyPolicy
+  url: https://cluely.com/privacy-policy
+- type: Support
+  url: https://support.cluely.com/en/
+- type: GitHubOrganization
+  url: https://github.com/cluely
+- type: StatusPage
+  url: https://cluely.trust.pagerduty.com/posts/dashboard/
+- type: ChangeLog
+  url: https://docs.cluely.com/changelog
+- type: ChangeLog
+  name: Cluely changelog (structured)
+  url: changelog/cluely-changelog.yml
+- type: CLI
+  name: Cluely CLI command surface
+  url: cli/cluely-cli.yml
+- type: Packages
+  name: Cluely CLI distribution packages
+  url: packages/cluely-packages.yml
+- type: LLMsTxt
+  name: Cluely docs llms.txt
+  url: llms/cluely-llms.txt
+- type: Authentication
+  name: Cluely authentication profile
+  url: authentication/cluely-authentication.yml
+- type: DomainSecurity
+  name: Cluely domain security posture
+  url: security/cluely-domain-security.yml
+- type: VulnerabilityDisclosure
+  name: Cluely bug bounty / disclosure
+  url: security/cluely-vulnerability-disclosure.yml
+- type: Security
+  name: Cluely bug bounty program
+  url: https://cluelyhq.notion.site/bugbounty
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

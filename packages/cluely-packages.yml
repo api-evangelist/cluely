@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cluely
+notes: >-
+  Cluely publishes a first-party CLI as a distributable binary. There is no
+  public REST API, so no server-side client SDKs (npm/PyPI/etc.) are published.
+  The packages below are the CLI binary distribution channels.
+packages:
+  - language: go
+    registry: homebrew
+    name: cluely
+    tap: cluely/tap
+    url: https://github.com/cluely/homebrew-tap
+    install: brew tap cluely/tap && brew install cluely
+    official: true
+    kind: cli
+  - language: go
+    registry: github-releases
+    name: cluely-cli
+    url: https://github.com/cluely/cluely-cli/releases/latest
+    install: curl -fsSL https://raw.githubusercontent.com/cluely/cluely-cli/main/install.sh | sh
+    official: true
+    kind: cli
+  - language: go
+    registry: source
+    name: github.com/cluely/cluely-cli
+    url: https://github.com/cluely/cluely-cli
+    install: git clone https://github.com/cluely/cluely-cli.git && cd cluely-cli && make install
+    official: true
+    kind: cli

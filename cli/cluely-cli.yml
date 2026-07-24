@@ -1,0 +1,95 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cluely/cluely-cli
+description: >-
+  First-party command-line interface for the Cluely platform. Manage meeting
+  sessions, transcripts, tags, and insights from the terminal. Written in Go.
+name: cluely
+language: go
+license_repo: https://github.com/cluely/cluely-cli
+latest_release: v0.3.0
+binary: cluely
+install:
+  - method: homebrew
+    commands:
+      - brew tap cluely/tap
+      - brew install cluely
+  - method: shell
+    commands:
+      - curl -fsSL https://raw.githubusercontent.com/cluely/cluely-cli/main/install.sh | sh
+  - method: source
+    commands:
+      - git clone https://github.com/cluely/cluely-cli.git
+      - cd cluely-cli && make install
+    requires: Go 1.26+
+platforms:
+  - darwin/arm64
+  - darwin/amd64
+  - linux/amd64
+  - linux/arm64
+  - windows/amd64
+  - windows/arm64
+auth:
+  model: browser-oauth
+  flow: "`cluely auth login` opens the browser to sign in"
+  credential_storage: OS keyring (macOS Keychain, Windows Credential Manager, Linux Secret Service)
+global_flags:
+  - flag: --json
+    description: Emit raw JSON for scripting and piping
+  - flag: --fields / --no-fields
+    description: Control which columns/sections are displayed
+commands:
+  - group: auth
+    description: Manage authentication (credentials stored in OS keyring)
+    subcommands:
+      - cluely auth login
+      - cluely auth logout
+      - cluely auth status
+  - group: sessions
+    alias: s
+    description: List and view meeting sessions, transcripts, and tags
+    subcommands:
+      - cluely sessions list
+      - cluely sessions get <session-id>
+      - cluely sessions update <session-id> --title --summary
+      - cluely sessions delete <session-id>
+      - cluely sessions tag <session-id> <tag-id>
+      - cluely sessions untag <session-id> <tag-id>
+      - cluely sessions watch
+    flags:
+      - "-n <count>"
+      - "--state <state>"
+      - "--since <duration>   # e.g. 24h, 7d"
+      - "--tag <tag-id>"
+      - "--fields / --no-fields"
+      - "--json"
+  - group: sessions watch
+    description: Watch for session start/end events in real time; run --exec commands per event
+    env_vars:
+      - CLUELY_EVENT       # start | end
+      - CLUELY_SESSION_ID
+      - CLUELY_SESSION_TITLE
+    flags:
+      - "--on <start|end>"
+      - "--exec <command>"
+  - group: tags
+    alias: t
+    description: Create, list, and delete tags for organizing sessions
+    subcommands:
+      - cluely tags list
+      - cluely tags create <name> --color <hex>
+      - cluely tags delete <tag-id>
+  - group: daemon
+    description: Run the session watcher as a persistent background service (launchd on macOS, systemd on Linux)
+    subcommands:
+      - cluely daemon start --exec <command>
+      - cluely daemon status
+      - cluely daemon logs [-f]
+      - cluely daemon stop
+    logs: ~/.config/cluely/logs/watch.log
+  - group: completion
+    description: Generate shell completions
+key_flows:
+  - "Authenticate, then list and inspect recent meeting sessions and transcripts"
+  - "Watch for meeting completion and export transcripts via --exec automation"
+  - "Run a background daemon that triggers scripts on session start/end"
