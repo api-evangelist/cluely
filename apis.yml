@@ -13,6 +13,17 @@ description: >-
   raised a Series A led by Andreessen Horowitz and is backed by Susa Ventures.
   There is no public REST API today; this profile captures the developer-facing
   surface Cluely does publish (CLI, changelog, llms.txt, bug bounty).
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
