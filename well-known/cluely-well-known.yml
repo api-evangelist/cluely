@@ -1,11 +1,12 @@
 generated: '2026-07-18'
 method: searched
 host: https://cluely.com
-notes: >-
-  Probed the standard /.well-known/ discovery surface on the primary host and
-  the docs host. None are published (all 404). Recorded for auditability; no
-  WellKnown catalog pointer is emitted because nothing is served.
-documents:
+notes: Probed the standard /.well-known/ discovery surface on the primary host and the docs host. None
+  are published (all 404). Recorded for auditability; no WellKnown catalog pointer is emitted because
+  nothing is served.
+hosts:
+- host: https://cluely.com
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -18,3 +19,8 @@ documents:
     status: 404
   - path: https://docs.cluely.com/.well-known/security.txt
     status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
